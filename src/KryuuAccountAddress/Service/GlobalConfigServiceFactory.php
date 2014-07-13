@@ -341,7 +341,7 @@ class GlobalConfigServiceFactory implements FactoryInterface{
 	public function entityManager()
 	{
 		if (null === $this->entityManager) {
-			$this->setEntityManager($this->getServiceLocator()->get('Doctrine\ORM\EntityManager'));
+			$this->setEntityManager($this->serviceLocator->get('Doctrine\ORM\EntityManager'));
 		}
 		return $this->entityManager;
 	}
@@ -357,7 +357,7 @@ class GlobalConfigServiceFactory implements FactoryInterface{
 	{
 		if ($this->translate == NULL)
 		{
-	  		$this->translate = $this->getServiceLocator()->get('translator');
+	  		$this->translate = $this->serviceLocator->get('translator');
 		}
 		return $this->translate->translate($string);
 	}

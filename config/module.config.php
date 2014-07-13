@@ -7,6 +7,17 @@ return array(
         'user_service' => 'KryuuAccount\UserInfoService',
         'address_entity' => 'KryuuAccountAddress\Entity\Address',
     ),
+    
+    'KryuuAccount' => array(
+        'user_data_methods' => array(
+            'getAddress' => array(
+                'service'   => 'KryuuAccountAddress\AddressServiceFactory',
+                'name'      => 'getAddress',
+                'function'  => 'get',
+                'args'      => '',
+            ),
+        ),
+    ),
 
     'controllers' => array(
         'invokables' => array(

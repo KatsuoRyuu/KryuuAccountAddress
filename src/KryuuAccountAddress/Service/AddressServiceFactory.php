@@ -71,7 +71,7 @@ class AddressServiceFactory implements FactoryInterface
 	public function get() {
         $userId = $this->userInfoService->getIdentity()->getId();
         if($userId){
-            $address = $this->configService->entityManager()->repository()->get($this->configService->get('address_entity'))->findOneBy(array('user'=>$userId));
+            $address = $this->configService->entityManager()->getRepository($this->configService->get('address_entity'))->findOneBy(array('user'=>$userId));
         }
         return $address;
     }

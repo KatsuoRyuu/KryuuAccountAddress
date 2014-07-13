@@ -1,6 +1,6 @@
 <?php
 
-namespace KryuuAddress\Entity;
+namespace KryuuAccountAddress\Entity;
 
 /**
  * @encoding UTF-8
@@ -39,7 +39,15 @@ namespace KryuuAddress\Entity;
  * @version 20140702 
  * @link https://github.com/KatsuoRyuu/
  */
+use Doctrine\ORM\Mapping as ORM,
+    Doctrine\Common\Collections\ArrayCollection;
 
+
+/**
+ * 
+ * @ORM\Entity
+ * @ORM\Table(name="kryuu_account_address_address")
+ */
 
 class Address {
     
